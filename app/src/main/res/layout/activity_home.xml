@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza"
+    android:orientation="vertical"
+    tools:context=".HomeActivity">
+
+    <!--LINEAR GLOBAL-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--LINEAR DO HEADER-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="130dp"
+                android:src="@drawable/mundonerd" />
+        </LinearLayout> <!--FIM LINEAR DO HEADER-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Bem vindo(a), O que vai fazer hoje?"
+            android:textColor="@color/branco"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- LINEAR PRA ORGANIZAR OS ITENS-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- LINEAR IMAGENS-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--CARD SORTEADOR-->
+                    <androidx.cardview.widget.CardView
+                        android:onClick="sorteador"
+                        android:id="@+id/sorteador"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="32dp"
+                        android:backgroundTint="#606060"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/maquina" />
+                    </androidx.cardview.widget.CardView> <!-- FIM CARD SORTEADOR-->
+
+                    <!--CARD SORTEADOR-->
+                    <androidx.cardview.widget.CardView
+                        android:onClick="rolarDados"
+                        android:id="@+id/rolarDados"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="32dp"
+                        android:backgroundTint="#606060"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/dice" />
+                    </androidx.cardview.widget.CardView> <!-- FIM CARD SORTEADOR-->
+
+                    <!--CARD SORTEADOR-->
+                    <androidx.cardview.widget.CardView
+                        android:onClick="frases"
+                        android:id="@+id/frases"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="32dp"
+                        android:backgroundTint="#606060"
+                        app:cardCornerRadius="10dp">
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginTop="40dp"
+                            android:src="@drawable/handshake" />
+                    </androidx.cardview.widget.CardView> <!-- FIM CARD SORTEADOR-->
+                </LinearLayout> <!--FIM LINEAR IMAGENS-->
+
+                <!--LINEAR TEXTOS-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:text="Sorteador"
+                        android:textColor="@color/branco"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="160dp"
+                        android:text="Rolar dado"
+                        android:textColor="@color/branco"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="190dp"
+                        android:text="Frases"
+                        android:textColor="@color/branco"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout> <!--FIM LINEAR TEXTOS-->
+
+            </LinearLayout> <!--FIM LINEAR PRA ORGANIZAR OS ITENS-->
+
+        </HorizontalScrollView>
+
+    </LinearLayout> <!--FIM LINEAR GLOBAL-->
+
+</LinearLayout>
